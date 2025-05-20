@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		EA1835152DDCAE2800A69FE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA1834FE2DDCAE2600A69FE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA1835052DDCAE2600A69FE8;
+			remoteInfo = "Quiet On Air";
+		};
+		EA18351F2DDCAE2800A69FE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA1834FE2DDCAE2600A69FE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA1835052DDCAE2600A69FE8;
+			remoteInfo = "Quiet On Air";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA1835062DDCAE2600A69FE8 /* Quiet On Air.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quiet On Air.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1835142DDCAE2800A69FE8 /* Quiet On AirTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quiet On AirTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA18351E2DDCAE2800A69FE8 /* Quiet On AirUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quiet On AirUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EA1835082DDCAE2600A69FE8 /* Quiet On Air */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Quiet On Air";
+			sourceTree = "<group>";
+		};
+		EA1835172DDCAE2800A69FE8 /* Quiet On AirTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Quiet On AirTests";
+			sourceTree = "<group>";
+		};
+		EA1835212DDCAE2800A69FE8 /* Quiet On AirUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Quiet On AirUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA1835032DDCAE2600A69FE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1835112DDCAE2800A69FE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA18351B2DDCAE2800A69FE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA1834FD2DDCAE2600A69FE8 = {
+			isa = PBXGroup;
+			children = (
+				EA1835082DDCAE2600A69FE8 /* Quiet On Air */,
+				EA1835172DDCAE2800A69FE8 /* Quiet On AirTests */,
+				EA1835212DDCAE2800A69FE8 /* Quiet On AirUITests */,
+				EA1835072DDCAE2600A69FE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA1835072DDCAE2600A69FE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA1835062DDCAE2600A69FE8 /* Quiet On Air.app */,
+				EA1835142DDCAE2800A69FE8 /* Quiet On AirTests.xctest */,
+				EA18351E2DDCAE2800A69FE8 /* Quiet On AirUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA1835052DDCAE2600A69FE8 /* Quiet On Air */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA1835282DDCAE2800A69FE8 /* Build configuration list for PBXNativeTarget "Quiet On Air" */;
+			buildPhases = (
+				EA1835022DDCAE2600A69FE8 /* Sources */,
+				EA1835032DDCAE2600A69FE8 /* Frameworks */,
+				EA1835042DDCAE2600A69FE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EA1835082DDCAE2600A69FE8 /* Quiet On Air */,
+			);
+			name = "Quiet On Air";
+			packageProductDependencies = (
+			);
+			productName = "Quiet On Air";
+			productReference = EA1835062DDCAE2600A69FE8 /* Quiet On Air.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA1835132DDCAE2800A69FE8 /* Quiet On AirTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA18352B2DDCAE2800A69FE8 /* Build configuration list for PBXNativeTarget "Quiet On AirTests" */;
+			buildPhases = (
+				EA1835102DDCAE2800A69FE8 /* Sources */,
+				EA1835112DDCAE2800A69FE8 /* Frameworks */,
+				EA1835122DDCAE2800A69FE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA1835162DDCAE2800A69FE8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EA1835172DDCAE2800A69FE8 /* Quiet On AirTests */,
+			);
+			name = "Quiet On AirTests";
+			packageProductDependencies = (
+			);
+			productName = "Quiet On AirTests";
+			productReference = EA1835142DDCAE2800A69FE8 /* Quiet On AirTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA18351D2DDCAE2800A69FE8 /* Quiet On AirUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA18352E2DDCAE2800A69FE8 /* Build configuration list for PBXNativeTarget "Quiet On AirUITests" */;
+			buildPhases = (
+				EA18351A2DDCAE2800A69FE8 /* Sources */,
+				EA18351B2DDCAE2800A69FE8 /* Frameworks */,
+				EA18351C2DDCAE2800A69FE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA1835202DDCAE2800A69FE8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EA1835212DDCAE2800A69FE8 /* Quiet On AirUITests */,
+			);
+			name = "Quiet On AirUITests";
+			packageProductDependencies = (
+			);
+			productName = "Quiet On AirUITests";
+			productReference = EA18351E2DDCAE2800A69FE8 /* Quiet On AirUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA1834FE2DDCAE2600A69FE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					EA1835052DDCAE2600A69FE8 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					EA1835132DDCAE2800A69FE8 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = EA1835052DDCAE2600A69FE8;
+					};
+					EA18351D2DDCAE2800A69FE8 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = EA1835052DDCAE2600A69FE8;
+					};
+				};
+			};
+			buildConfigurationList = EA1835012DDCAE2600A69FE8 /* Build configuration list for PBXProject "Quiet On Air" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA1834FD2DDCAE2600A69FE8;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EA1835072DDCAE2600A69FE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA1835052DDCAE2600A69FE8 /* Quiet On Air */,
+				EA1835132DDCAE2800A69FE8 /* Quiet On AirTests */,
+				EA18351D2DDCAE2800A69FE8 /* Quiet On AirUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA1835042DDCAE2600A69FE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1835122DDCAE2800A69FE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA18351C2DDCAE2800A69FE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA1835022DDCAE2600A69FE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1835102DDCAE2800A69FE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA18351A2DDCAE2800A69FE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA1835162DDCAE2800A69FE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA1835052DDCAE2600A69FE8 /* Quiet On Air */;
+			targetProxy = EA1835152DDCAE2800A69FE8 /* PBXContainerItemProxy */;
+		};
+		EA1835202DDCAE2800A69FE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA1835052DDCAE2600A69FE8 /* Quiet On Air */;
+			targetProxy = EA18351F2DDCAE2800A69FE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EA1835262DDCAE2800A69FE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6F4HC756PJ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA1835272DDCAE2800A69FE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6F4HC756PJ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		EA1835292DDCAE2800A69FE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Quiet On Air/Quiet_On_Air.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F4HC756PJ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JR.Quiet-On-Air";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EA18352A2DDCAE2800A69FE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Quiet On Air/Quiet_On_Air.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F4HC756PJ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JR.Quiet-On-Air";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EA18352C2DDCAE2800A69FE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F4HC756PJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JR.Quiet-On-AirTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quiet On Air.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Quiet On Air";
+			};
+			name = Debug;
+		};
+		EA18352D2DDCAE2800A69FE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F4HC756PJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JR.Quiet-On-AirTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quiet On Air.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Quiet On Air";
+			};
+			name = Release;
+		};
+		EA18352F2DDCAE2800A69FE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F4HC756PJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JR.Quiet-On-AirUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Quiet On Air";
+			};
+			name = Debug;
+		};
+		EA1835302DDCAE2800A69FE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F4HC756PJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JR.Quiet-On-AirUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Quiet On Air";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA1835012DDCAE2600A69FE8 /* Build configuration list for PBXProject "Quiet On Air" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1835262DDCAE2800A69FE8 /* Debug */,
+				EA1835272DDCAE2800A69FE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA1835282DDCAE2800A69FE8 /* Build configuration list for PBXNativeTarget "Quiet On Air" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1835292DDCAE2800A69FE8 /* Debug */,
+				EA18352A2DDCAE2800A69FE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA18352B2DDCAE2800A69FE8 /* Build configuration list for PBXNativeTarget "Quiet On AirTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA18352C2DDCAE2800A69FE8 /* Debug */,
+				EA18352D2DDCAE2800A69FE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA18352E2DDCAE2800A69FE8 /* Build configuration list for PBXNativeTarget "Quiet On AirUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA18352F2DDCAE2800A69FE8 /* Debug */,
+				EA1835302DDCAE2800A69FE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA1834FE2DDCAE2600A69FE8 /* Project object */;
+}

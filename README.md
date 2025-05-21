@@ -1,66 +1,123 @@
-# QuietOnAir
+# Quiet-on-Air
 
-🎙️ A tiny macOS menu bar utility that pauses/resumes media playback on your Apple TV or HomePods when your Mac mic is in use.
+🎙️ **Quiet-on-Air** is a lightweight macOS menu-bar utility that automatically **pauses** your Apple TV or HomePod playback when your Mac’s microphone is in use, and **resumes** playback when you stop speaking—only if **Quiet-on-Air** initiated the pause.
 
-Built in Swift 5.9 – macOS 13+
+Built with Swift 5.9 for macOS 13+.
 
 ---
 
-## 💡 How It Works
+## 💡 Overview
 
-- Detects microphone activity using CoreAudio.
-- Runs Apple Shortcuts:
-  - When mic becomes active → runs `Pause Media`
-  - When mic is released → runs `Resume Media` (only if it was paused by the app)
+1. **Mic Detection**  
+   Uses CoreAudio to observe the system’s default input device.  
+2. **Shortcut Invocation**  
+   - On mic **start** → runs the **Pause Media** shortcut  
+   - On mic **stop** → runs the **Resume Media** shortcut (only if paused earlier)  
+3. **Menu-Bar UI**  
+   Custom icon indicates live mic status.
 
 ---
 
 ## 🧰 Requirements
 
-- macOS 13 Ventura or newer
-- Two Shortcuts named exactly:
-  - `Pause Media` – pauses HomePod or Apple TV playback
-  - `Resume Media` – resumes playback
-- Enable the following in app settings:
-  - ✅ App Sandbox › Audio Input
-  - ✅ `NSMicrophoneUsageDescription` in `Info.plist`
+- macOS 13 Ventura or later  
+- **Shortcuts** app (built into macOS)  
+- Two user-defined Shortcuts (case-sensitive names):
+  1. **Pause Media**  
+     - Action: *Control Home → Set Playback State → Pause*  
+     - Targets your Apple TV/HomePod devices  
+  2. **Resume Media**  
+     - Action: *Control Home → Set Playback State → Play*  
+     - Same targets  
+
+- In Xcode **Signing & Capabilities**:
+  - ✅ App Sandbox → Audio Input  
+- In **Info.plist**:
+  - Add **Privacy – Microphone Usage Description**  
+    ```xml
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Quiet-on-Air needs mic access to pause/resume media automatically.</string>
+    ```
 
 ---
 
-## 🚀 Installation
+## 🚀 Installation & Usage
 
-- Open `QuietOnAir.xcodeproj` in Xcode
-- Build and run
+### A. Build from Source
 
-> 🔒 On first launch, macOS will prompt for microphone access.
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/JacksonR64/quietonair.git
+   cd quietonair
+   ```
+2. **Open in Xcode**  
+   ```bash
+   open QuietOnAir.xcodeproj
+   ```
+3. **Build & Run** (⌘R)  
+4. **Grant mic access** when prompted  
+5. **Test**: play media on your Apple TV/HomePod, use dictation or FaceTime → playback pauses/resumes automatically
 
----
+### B. Download Prebuilt App
 
-## 📦 Version History
-
-### v0.1.0 (Initial Release)
-- Menu bar app that observes mic activity.
-- Pauses and resumes media via Apple Shortcuts.
-- Only resumes media if it was previously paused by QuietOnAir.
-
----
-
-## 🧭 Roadmap
-
-- [ ] Menu bar toggle: Enable/disable pause/resume feature
-- [ ] Alternate mode: Mute instead of Pause (requires new Shortcut)
-- [ ] Launch at login support
-- [ ] Hide from Dock (menu bar only)
-- [ ] Release downloadable `.app` version
+1. Download the latest **QuietOnAir.app.zip** from the [Releases page](https://github.com/JacksonR64/quietonair/releases).  
+2. Unzip and drag **Quiet On Air.app** into `/Applications`.  
+3. Launch and approve the microphone prompt.  
 
 ---
 
-## 📝 License
+## 📋 Detailed Shortcuts Setup
 
-MIT License (Add full LICENSE file if needed)
+1. **Open Shortcuts**  
+2. **Create “Pause Media”**  
+   - Add action: **Control Home → Set Playback State → Pause**  
+   - Select your Apple TV/HomePod accessories  
+3. **Create “Resume Media”**  
+   - Duplicate “Pause Media”, rename it, change state to **Play**  
+4. **(Optional) Check Playback**  
+   ```bash
+   # control home get playback state
+   ```  
+   - Add action: **Control Home → Get Playback State**  
+   - Add **If**:  
+     - If **Playback State** is **Playing**, **Text** → `True`  
+     - Otherwise, **Text** → `False`  
+   - Name it **Check Playback** for use in the code’s `isPlaying()` check  
 
 ---
 
-## 🛠 Developer Notes
+## 🚧 License & Intellectual Property
 
-This is a hobby utility for personal use, feel free to fork and expand.
+- **License:** MIT License © 2025 Jackson Rhoden ([LICENSE](LICENSE)).  
+- **Usage:** You are free to use, modify, and redistribute this code under the MIT terms.  
+- **Idea Protection:** While the code is open source, the underlying concept and branding (“Quiet-on-Air”) remain my original work. Please credit the author and do not publish a competing app under the same or confusingly similar name.
+
+---
+
+## 📦 Release History
+
+- **v0.1.0** (2025-05-21)  
+  - Initial public beta: mic-triggered pause/resume, custom menu-bar icon.
+
+---
+
+## 🧭 Roadmap & Future Plans
+
+- **Preferences UI**  
+  - Toggle global vs. per-app pause rules  
+  - Whitelist specific communication apps (FaceTime, Zoom, Teams)  
+  - Enable “mute” mode (lower volume instead of pause)  
+- **Launch-at-Login** support  
+- **Volume ducking** rather than full pause  
+- **Multi-zone control**: pause/resume multiple AirPlay devices in sync  
+- **Sparkle integration** for in-app updates  
+- **Packaging & CI/CD**  
+  - Automated builds & GitHub Actions  
+  - Signed & notarized `.pkg` or `.dmg` installer  
+- **Localization** & theming (dark mode, custom tint)
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.

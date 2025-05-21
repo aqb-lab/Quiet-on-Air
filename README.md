@@ -14,7 +14,7 @@ Built with Swift 5.9 for macOS 13+.
    - On mic **start** → runs the **Pause Media** shortcut  
    - On mic **stop** → runs the **Resume Media** shortcut (only if paused earlier)  
 3. **Menu-Bar UI**  
-   Custom icon indicates live mic status.
+   Custom icon for basic controls and configuration 
 
 ---
 
@@ -43,26 +43,41 @@ Built with Swift 5.9 for macOS 13+.
 
 ## 🚀 Installation & Usage
 
-### A. Build from Source
+### Option A: Download Prebuilt App
+
+1. Download the latest **Quiet On Air.app.zip** from the [Releases page](https://github.com/JacksonR64/quiet-on-air/releases).  
+2. Unzip and drag **Quiet On Air.app** into `/Applications`.  
+3. Launch it—macOS may block unsigned apps; see **Security & Privacy** below.  
+4. Grant permission when prompted.
+
+### Option B: Build from Source
 
 1. **Clone the repo**  
    ```bash
-   git clone https://github.com/JacksonR64/quietonair.git
-   cd quietonair
+   git clone https://github.com/JacksonR64/quiet-on-air.git
+   cd quiet-on-air
    ```
 2. **Open in Xcode**  
    ```bash
    open QuietOnAir.xcodeproj
    ```
-3. **Build & Run** (⌘R)  
-4. **Grant mic access** when prompted  
-5. **Test**: play media on your Apple TV/HomePod, use dictation or FaceTime → playback pauses/resumes automatically
+3. **Enable entitlements** as per **Requirements**.  
+4. **Build & Run** (⌘R).  
+5. **Grant mic access** when prompted.
 
-### B. Download Prebuilt App
+---
 
-1. Download the latest **QuietOnAir.app.zip** from the [Releases page](https://github.com/JacksonR64/quietonair/releases).  
-2. Unzip and drag **Quiet On Air.app** into `/Applications`.  
-3. Launch and approve the microphone prompt.  
+## 🔒 Security & Privacy
+
+On first launch, macOS may block **Quiet On Air** since it is not notarized by Apple. To allow it:
+
+1. Go to **System Settings** → **Privacy & Security**.  
+2. Scroll down to the **Security** section.  
+3. Under **Allow apps downloaded from**, locate the message stating **Quiet On Air** was blocked.  
+4. Click **Open Anyway** next to that message.  
+5. Then launch **Quiet On Air** again via Finder (right-click ↦ **Open** if needed).
+
+This grants the necessary permission so the app can run without further prompts.
 
 ---
 
@@ -74,10 +89,7 @@ Built with Swift 5.9 for macOS 13+.
    - Select your Apple TV/HomePod accessories  
 3. **Create “Resume Media”**  
    - Duplicate “Pause Media”, rename it, change state to **Play**  
-4. **(Optional) Check Playback**  
-   ```bash
-   # control home get playback state
-   ```  
+4. **Optional: Check Playback**  
    - Add action: **Control Home → Get Playback State**  
    - Add **If**:  
      - If **Playback State** is **Playing**, **Text** → `True`  
@@ -86,11 +98,29 @@ Built with Swift 5.9 for macOS 13+.
 
 ---
 
-## 🚧 License & Intellectual Property
+## 🚧 Known Issues & Limitations
 
-- **License:** MIT License © 2025 Jackson Rhoden ([LICENSE](LICENSE)).  
-- **Usage:** You are free to use, modify, and redistribute this code under the MIT terms.  
-- **Idea Protection:** While the code is open source, the underlying concept and branding (“Quiet-on-Air”) remain my original work. Please credit the author and do not publish a competing app under the same or confusingly similar name.
+- **Homebridge plugin dependency**  
+  Current playback-state detection relies on the Homebridge “Apple TV Enhanced” plugin. Users without Homebridge cannot use the auto-pause feature.  
+- **Native Dictation support**  
+  Apple’s built-in Dictation feature does not set the standard CoreAudio “in use” flag currently used by **Quiet-on-Air**, so media playback will not pause/resume when using native dictation.  
+- **Menu-Bar Icon shape**  
+  The current icon is a full square image. We plan to update it to a proper rounded-corner asset in a future release.
+
+These issues are on our radar and planned for upcoming updates.
+
+---
+
+## ☕ Support
+
+Quiet-on-Air is free and open-source, but code signing and notarization require a paid Apple Developer Program membership (USD $99/year). If you'd like to help cover the cost of a Developer ID certificate and make future releases smoother (no Gatekeeper prompts), consider buying me a coffee:
+
+[☕ Buy Me a Coffee](https://www.buymeacoffee.com/YourProfile)
+
+Your support will directly contribute to:
+- Signing and notarizing releases so they run without warnings.  
+- Hosting and bandwidth costs for binary distribution.  
+- Ongoing development and new features.
 
 ---
 
@@ -103,6 +133,8 @@ Built with Swift 5.9 for macOS 13+.
 
 ## 🧭 Roadmap & Future Plans
 
+- **Native HomeKit integration** (remove Homebridge dependency)  
+- **Rounded-corner menu-bar icon** (improve branding)  
 - **Preferences UI**  
   - Toggle global vs. per-app pause rules  
   - Whitelist specific communication apps (FaceTime, Zoom, Teams)  
@@ -121,3 +153,10 @@ Built with Swift 5.9 for macOS 13+.
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## 🚩 License & Intellectual Property
+
+MIT License © 2025 Jackson Rhoden. See [LICENSE](LICENSE).  
+Please credit the author and do not publish a competing app under the same or confusingly similar name.

